@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="container">
+        <div class="row mtop70">
+            <div class="col-md">
+                <h1>{{place.name}}</h1>
+                <p>
+                    {{place.description}}
+                </p>
+            </div>
+            <div class="col-md">
+                <img src="{{place.image}}" alt="{{place.name}}" height=400
+                    class="rounded mx-auto d-block imgLocal">
+            </div>
+        </div>
+        <div class="row mtop70">
+            <div class="card mbot40">
+                <div class="row">
+                    <div class="col bord1right">
+                        <h4>
+                            Totale Persone Attualmente
+                        </h4>
+                        <h3>1000</h3>
+                    </div>
+                    <div class="col bord1right tcenter">
+                        <h4>
+                            Numero Attrazioni
+                        </h4>
+                        <h3>{{place.nAttrazioni}}</h3>
+                    </div>
+                    <div class="col tcenter">
+                        <h4>
+                            Tempo medio Visita
+                        </h4>
+                        <h3>{{place.m_permanenza}}min</h3>
+                    </div>
+                </div>
+
+            </div>
+            <hr>
+
+            <h2 class=" d-flex justify-content-center">Attrazioni consigliate</h2>
+            <div class="mbot40">
+                <div class="row row-cols-md-3 ">
+                    <div class="col d-flex justify-content-center" *ngFor="let item of listAttrazioni">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{item.img}}" height=70% class="card-img-top" alt="{{item.name}}">
+                            <div class="card-body">
+                                <p class="card-text">{{item.name}}</p>
+                                <p class="card-text">Orari Apertura : {{item.orari}}</p>
+                                <p class="card-text">Tempo visita : {{item.p_media_permanenza}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <h2 class=" d-flex justify-content-center">PASS</h2>
+            <div class="card mtop30">
+                <div class="card-body">
+                    <div class="row row-cols-md-3 ">
+                        <div class="col-4 bord1right d-flex justify-content-center align-items-center">
+                            <h2>
+                                {{place.name}}
+                            </h2>
+
+                        </div>
+                        <div class="col-3 bord1right tcenter">
+                            <h3>
+                                Tipologia
+                            </h3>
+                            {{place.theme}}
+
+
+                        </div>
+                        <div class="col-3 d-flex align-items-center justify-content-center bord1right">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#mapsModal" class="btn btn-primary"
+                                style="font-size: 18px;"><img src="assets/map.svg"> Mappa
+                                Attrazioni</a>
+                        </div>
+                        <div class="col-2 d-flex align-items-center justify-content-center ">
+                            <a routerLink="/pass" class="btn btn-primary" style="font-size: 18px;">Acquista</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal maps -->
+    <div class="modal fade" id="mapsModal" tabindex="-1" aria-labelledby="mapsModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mappa Attrazioni</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body  d-flex justify-content-center">
+                    <img src="assets/monumenti-di-roma.jpg" alt="mappa Attrazioni">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal maps -->
+
+</body>
+
+</html>
