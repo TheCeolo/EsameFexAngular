@@ -2,7 +2,7 @@
 
 [Repository del progetto angular](https://github.com/TheCeolo/EsameFex)
 
-[Personas + CJM + STS](https://miro.com/app/board/o9J_l6aw5Q8=/)
+[Personas + CJM + STS](https://miro.com/app/board/o9J_l6ab7H8=/)
 
 
 # Istruzioni per visualizzare il progetto
